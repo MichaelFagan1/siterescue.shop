@@ -1,4 +1,4 @@
-import { Linkedin, Mail, ArrowUpRight, FileText } from "lucide-react";
+import { Linkedin, Mail, FileText } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -35,21 +35,16 @@ const Contact = () => {
               href="https://www.linkedin.com/in/michael-fagan-michael-fagan/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-syne font-bold transition-all duration-300 hover:scale-105"
-              style={{
-                background: "hsl(var(--primary))",
-                color: "hsl(var(--primary-foreground))",
-                boxShadow: "var(--shadow-btn)",
-              }}
+              className="inline-flex items-center justify-center gap-2 min-w-[190px] h-12 px-6 rounded-xl font-syne font-bold border border-primary/40 transition-all duration-300 hover:scale-105"
+              style={{ color: "hsl(var(--foreground))" }}
             >
               <Linkedin size={18} />
               Connect on LinkedIn
-              <ArrowUpRight size={18} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </a>
 
             <a
               href="mailto:michael@siterescue.shop"
-              className="group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-syne font-bold transition-all duration-300 hover:scale-105 border border-primary/40"
+              className="inline-flex items-center justify-center gap-2 min-w-[190px] h-12 px-6 rounded-xl font-syne font-bold border border-primary/40 transition-all duration-300 hover:scale-105"
               style={{ color: "hsl(var(--foreground))" }}
             >
               <Mail size={18} />
@@ -58,7 +53,7 @@ const Contact = () => {
 
             <a
               href="#intake-form"
-              className="group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-syne font-bold transition-all duration-300 hover:scale-105 border border-primary/40"
+              className="inline-flex items-center justify-center gap-2 min-w-[190px] h-12 px-6 rounded-xl font-syne font-bold border border-primary/40 transition-all duration-300 hover:scale-105"
               style={{ color: "hsl(var(--foreground))" }}
             >
               <FileText size={18} />
@@ -78,7 +73,9 @@ const Contact = () => {
           <h4 className="font-syne font-bold text-2xl mb-2">Project Intake Form</h4>
           <p className="text-muted-foreground mb-6">Share your details and current website. I’ll review and reply with next steps.</p>
 
-          <form action="mailto:michael@siterescue.shop" method="post" encType="text/plain" className="space-y-4">
+          <form action="https://formsubmit.co/michael@siterescue.shop" method="POST" className="space-y-4">
+            <input type="hidden" name="_subject" value="New SiteRescue Lead" />
+            <input type="hidden" name="_captcha" value="false" />
             <div>
               <label className="block text-sm mb-2 text-muted-foreground">Name</label>
               <input

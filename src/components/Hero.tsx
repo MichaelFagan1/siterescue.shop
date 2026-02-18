@@ -62,7 +62,7 @@ const Hero = () => {
         <div className="mt-20 grid grid-cols-3 gap-8 max-w-lg mx-auto animate-fade-up" style={{ animationDelay: "0.45s" }}>
           {[
             { value: "$200", label: "Flat Rate" },
-            { value: "7 Days", label: "Avg. Turnaround" },
+            { value: "2 Days", label: "Avg. Turnaround" },
             { value: "100%", label: "Satisfaction" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
